@@ -179,6 +179,10 @@ module Writer
             root << xml.create_element(:legacyDrawing, { 'r:id' => @worksheet.legacy_drawing[:attributes][:id] })
           end
 
+          unless @worksheet.drawing.nil?
+            xml.drawing('r:id'=>@worksheet.drawing[:attributes][:id])
+          end
+
           unless @worksheet.extLst.nil?
             root << (xml.create_element('extLst') { |extlst|
               extlst << (xml.create_element('ext', {
