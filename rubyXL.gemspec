@@ -53,7 +53,7 @@ Gem::Specification.new do |s|
     "spec/lib/parser_spec.rb",
     "spec/lib/workbook_spec.rb",
     "spec/lib/worksheet_spec.rb"
-  ]
+  ] 
   s.homepage = "http://github.com/gilt/rubyXL"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
