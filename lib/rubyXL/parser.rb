@@ -365,7 +365,7 @@ module RubyXL
       wb.date1904 = files['workbook'].css('workbookPr').attribute('date1904').to_s == '1'
     end
 
-    def self.attr_int(node, attr_name) 
+    def self.attr_int(node, attr_name)
       attr = node.attributes[attr_name]
       attr && Integer(attr.value)
     end
