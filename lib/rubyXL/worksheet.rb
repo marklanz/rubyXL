@@ -19,7 +19,7 @@ class Worksheet < PrivateClass
     @row_styles={}
     @sheet_view = {
                     :attributes => {
-                                      :workbookViewId => 0, :zoomScale => 100, :tabSelected => 1, :view=>'normalLayout', :zoomScaleNormal => 100
+                                      :workbookViewId => 0, :zoomScale => 100, :tabSelected => 1, :view=>'normal', :zoomScaleNormal => 100
                                    }
                   }
     @extLst = nil
