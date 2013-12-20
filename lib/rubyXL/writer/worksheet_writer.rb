@@ -188,7 +188,9 @@ module Writer
               extlst << (xml.create_element('ext', {
                           'xmlns:mx' => 'http://schemas.microsoft.com/office/mac/excel/2008/main',
                           'uri'      => 'http://schemas.microsoft.com/office/mac/excel/2008/main' }) { |ext|
-                ext << xml.create_element('mx:PLV', { :Mode => 1, :OnePage => 0, :WScale => 0 })
+                ext << xml.create_element('mx:PLV', { :Mode => @worksheet.extLst[:ext][:PLV][:attributes][:Mode] || '0',
+                                                      :OnePage => @worksheet.extLst[:ext][:PLV][:attributes][:OnePage] || '0',
+                                                      :WScale => @worksheet.extLst[:ext][:PLV][:attributes][:WScale] || '0' })
               })
             })
           end
